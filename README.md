@@ -1,9 +1,29 @@
-# 3DMIT
-Models and visualisations related to the 3D Matrix Inductor Transformer and its publication in IEEE JESTPE
+# 3D-Matrix Inductor Transformer (3D-MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-DOI: TBD
+MATLAB implementation for the 3D-Matrix Inductor Transformer published in IEEE JESTPE. Provides analytical models, simulation data, and design tools for high-frequency planar magnetics in resonant converters.
 
-All relevant data is provided in the respective directory.
+## Requirements
+- MATLAB 2024a
 
-Figures are post-processed in Adobe Illustrator.
+## Repository Structure
+- `/data`: All measurement and simulation datasets
+- `.m files`: Analysis scripts ordered by paper sequence
+- `LICENSE`: MIT License terms
 
+## Usage
+1. Clone repository
+2. Run any `.m` file in MATLAB 2024a
+   - Files follow paper's design sequence
+   - Executable independently
+
+## Key Features
+- Reproducible analytical models
+- Open datasets for verification
+- Adaptable to other converter designs
+
+## License
+MIT Licensed - See [LICENSE](LICENSE)
+
+## Citation
+_DOI will be added upon publication_
