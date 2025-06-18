@@ -1,7 +1,7 @@
 # 3D-Matrix Inductor Transformer (3D-MIT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-MATLAB implementation for the 3D-Matrix Inductor Transformer published in IEEE JESTPE. Provides analytical models, simulation data, and design tools for high-frequency planar magnetics in resonant converters.
+MATLAB implementation for the 3D-Matrix Inductor Transformer to be published in IEEE JESTPE. Provides analytical models, simulation data, and design tools for high-frequency planar magnetics in resonant converters.
 
 ## Requirements
 - MATLAB 2024a
