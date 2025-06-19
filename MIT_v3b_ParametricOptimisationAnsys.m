@@ -1,8 +1,18 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1", "#E0CD44"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF", "#ECE18E"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000", "#9A8B1A"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000", "#F5EFC1"];
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
+
+% Ensure toolbox is available
+assert(~isempty(ver('globaloptim')), 'Global Optimization Toolbox required');
+assert(license('test','gads_toolbox'), 'No license for Global Optimization Toolbox');
+
+%% --------------------------------------------------------------------------------------
+% Parametric optimisation of the 3D-MIT using custom cores
+% --------------------------------------------------------------------------------------
+%  Visualisation of Ansys Maxwell FEA results
 
 
 %% Input parameters
@@ -10,7 +20,6 @@ colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", 
 Vp = 400;  % [V] nominal pri voltage
 Vs = 400;  % [V] nominal sec voltage
 Ip = 10;  % [A] nominal pri current
-fs = 500e3;  % [Hz] nominal frequency
 Np = 9;  % [-] no. of primary turns
 
 % Calculate basic parameters
@@ -101,7 +110,7 @@ if plotPareto == true
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'w-', 'LineWidth', 2.5);
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'k-', 'LineWidth', 1.5);
 
-    %figName = "../Figs 3DMIT/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    figName = "figs/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
@@ -137,8 +146,8 @@ if plotIters == true
     ylabel('Cost');
     set(gca, 'YScale', 'log');    grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    figName = "../Figs 3DMIT/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-    %figName = "test-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+    figName = "figs/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    figName = "figs/ansys_cost_iter-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 end
 
 

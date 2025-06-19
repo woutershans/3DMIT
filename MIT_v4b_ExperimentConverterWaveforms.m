@@ -1,8 +1,14 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
+
+%% --------------------------------------------------------------------------------------
+% CLLC converter with 3D-MIT Gen1 prototype experimental waveforms
+% --------------------------------------------------------------------------------------
+
 
 %% Plot converter operation waveforms
 
@@ -11,7 +17,6 @@ base = 'data\20250121_cllc_3dmit__';
 
 i = 4;  % Choos a specific file no.
 file = sprintf('%03d', i);
-fprintf('\n Opening: %s', [base file]);
 
 % Get data tables
 data_ip1 = load([base file '_ch1.mat']);
@@ -45,7 +50,6 @@ legend({'P', 'S'}, 'Orientation', 'vertical', 'Location', 'southeast');
 xlabel('Time (µs)');  ylabel('Current (A)');
 ylim([-20 20]); %xlim([0,1]);
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
-set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 10);
 
 subplot(2,1,2); hold on;
 plot(time1*1e6, vp1, '-', 'color', colorsNORM(1), 'LineWidth', 1);
@@ -55,13 +59,13 @@ xlabel('Time (µs)');  ylabel('Voltage (V)');
 ylim([-500 500]); %xlim([0,1]);
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, '../Figs 3DMIT/waveforms300V-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'figs/waveforms300V-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 %% Plot converter ZVS validation waveforms
 
 % Define filename
-base = '../Exp/20250115 CLLC testing/20250115_cllc_3dmit__';
+base = 'data/20250115_cllc_3dmit__';
 
 %for i = 0:65  % Loop the files
 i = 100;  % Choos a specific file
@@ -102,4 +106,4 @@ ylim([-2, 12].*(500/12));
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
 ax.YAxis(1).Color = colorsDARK(1); ax.YAxis(2).Color = colorsDARK(1);
-%exportgraphics(fig, '../Figs 3DMIT/waveforms_zvs-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'figs/waveforms_zvs-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');

@@ -11,6 +11,8 @@ function cmap = cmapSpectral(nColors)
 %   contourf(X, Y, Z, 20, 'LineColor', 'none');
 %   colormap(cmap_spectral); colorbar;
 
+    hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
+
     if nargin < 1
         nColors = 256;  % Default number of colors
     end

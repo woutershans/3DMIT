@@ -23,13 +23,23 @@ _DOI will be added upon publication_
 ## Repository Structure
 - `/data`: All measurement and simulation datasets
 - `.m files`: Analysis scripts ordered by paper sequence
+- `run_all.m`: Master script to run all analyses sequentially
+- `run.sh`: Code Ocean executable script (for capsule)
 - `LICENSE`: MIT License terms
 
 ## Requirements
 - MATLAB 2024a
+- Global Optimization Toolbox (required for parametric optimisation)
 
 ## Usage
+
+### Individual Script Execution
 1. Clone repository
 2. Run any `.m` file in MATLAB 2024a
    - Files follow paper's sequence
    - Executable independently
+
+### Full Reproducible Run
+```bash
+# Run all analyses sequentially
+matlab -batch "run_all"

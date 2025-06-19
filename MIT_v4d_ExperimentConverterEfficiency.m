@@ -1,11 +1,14 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
+%% --------------------------------------------------------------------------------------
+% CLLC converter with 3D-MIT Gen1 prototype experimental efficiency curves
+% --------------------------------------------------------------------------------------
 
-%% Efficiency curves
 
 % Get data
 data = readtable('data/20250117 efficiency measurements.csv');
@@ -60,7 +63,7 @@ grid on; box on; grid(gca,'minor');
 ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, '../Figs 3DMIT/eff_curve-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'figs/eff_curve-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 

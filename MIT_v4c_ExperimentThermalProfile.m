@@ -1,10 +1,14 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
-%% Plot thermal transient response
+%% --------------------------------------------------------------------------------------
+% CLLC converter and 3D-MIT Gen1 prototype thermal measurement results
+% --------------------------------------------------------------------------------------
+
 
 % Define filename
 file = 'data/20250424_thermal.csv';
@@ -48,7 +52,7 @@ ylim([20 70]); xlim([0 760]); xticks(60.*(1:1:12));
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, '../Figs 3DMIT/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'figs/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 

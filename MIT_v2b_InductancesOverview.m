@@ -1,14 +1,15 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#E0CD44"];
 colorsPAST = ["#9e9e9e", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#ECE18E"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#9A8B1A"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#F5EFC1"];
-
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
 %% --------------------------------------------------------------------------------------
 %  3D-MIT inductance model visualisation for various parameter sweeps
 %  --------------------------------------------------------------------------------------
 %  Sweeping number of turns N, air gap length lg, and turns delta dN
+
 
 % Define colormaps
 nColors = 256;  % Number of colors in the colormap
@@ -120,4 +121,4 @@ for idx = 1:length(dN_values)
     caxis(ax3, [0 5]);
 end
 set(findall(gcf, '-property', 'FontName'), 'FontName', 'Cambria', 'FontSize', 12);
-exportgraphics(fig, "..\Figs 3DMIT\LmLnLk_all-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, "figs/LmLnLk_all-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');

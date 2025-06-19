@@ -1,8 +1,16 @@
-close all; clear;
+%clearvars; close all;
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1", "#E0CD44"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF", "#ECE18E"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000", "#9A8B1A"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000", "#F5EFC1"];
+hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
+
+%% --------------------------------------------------------------------------------------
+% Parametric optimisation of the 3D-MIT using commercial cores
+% --------------------------------------------------------------------------------------
+%  Based on analytical MATLAB models and Ansys Maxwell FEA results
+
+
 
 %% Extract the losses from the Ansys datafile
 data = readtable('data\ITX_Parametric_v2_2D_Losses.csv');
@@ -196,7 +204,7 @@ if figDesigns == true
     set(gca,"XTick",[5 10 15 20]); set(gca,"YTick",[0.035 0.070 0.105 0.140]); 
    
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria');
-    %exportgraphics(fig, fullfile(pwd, '..', 'Figs ITX design', 'itx_design-rw.pdf'), 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "figs/itx_design-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
@@ -228,7 +236,7 @@ if figCombined == true
     
     legend(["P_magn", "fp", "Javg", "Cii", "Cij"], 'Orientation', 'vertical', 'Location', 'northeastoutside'); box on;
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    %exportgraphics(fig, "itx_design_comb-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "figs/itx_design_comb-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
@@ -262,7 +270,7 @@ if plotCores == true
     xlim([100 250]); ylim([10 26]);
     grid on; box on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1;
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    %exportgraphics(fig, fullfile(pwd, '..', 'Figs ITX design', 'itx_design_core-rw.pdf'), 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "figs/itx_design_core-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
