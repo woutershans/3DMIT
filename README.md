@@ -22,7 +22,7 @@ _DOI will be added upon publication_
 
 ## Repository Structure
 - `/data`: All measurement and simulation datasets
-- `.m files`: Analysis scripts ordered by paper sequence
+- `/code/*.m files`: Analysis scripts ordered by paper sequence
 - `run_all.m`: Master script to run all analyses sequentially
 - `run.sh`: Code Ocean executable script (for capsule)
 - `LICENSE`: MIT License terms

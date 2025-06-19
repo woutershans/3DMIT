@@ -11,7 +11,7 @@ hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
 
 % Load the current waveform data from the CSV file
-data = readtable('data\ResonantCurrent_TI.csv');
+data = readtable('data/ResonantCurrent_TI.csv');
 
 % Extract the time and current data
 time = data.Time_S-0.006309707461001;   % Time in seconds
@@ -96,7 +96,7 @@ if plotLines == true
     xlim([0 2/500000].*1e6); ylim([-130 130]);
 
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 14);
-    %exportgraphics(fig, "figs/waves_B-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %exportgraphics(fig, "results/waves_B-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 plotCurrents = true;
@@ -108,6 +108,6 @@ if plotCurrents == true
     xlim([0 3/500000])
 
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    %exportgraphics(fig, "figs/waves_I-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %exportgraphics(fig, "results/waves_I-rw.pdf", 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 

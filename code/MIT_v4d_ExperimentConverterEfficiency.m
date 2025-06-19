@@ -63,7 +63,7 @@ grid on; box on; grid(gca,'minor');
 ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, 'figs/eff_curve-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'results/eff_curve-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 

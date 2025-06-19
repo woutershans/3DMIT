@@ -13,7 +13,7 @@ hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 %% Plot converter operation waveforms
 
 % Define filename
-base = 'data\20250121_cllc_3dmit__';
+base = 'data/20250121_cllc_3dmit__';
 
 i = 4;  % Choos a specific file no.
 file = sprintf('%03d', i);
@@ -59,7 +59,7 @@ xlabel('Time (µs)');  ylabel('Voltage (V)');
 ylim([-500 500]); %xlim([0,1]);
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, 'figs/waveforms300V-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'results/waveforms300V-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 %% Plot converter ZVS validation waveforms
@@ -106,4 +106,4 @@ ylim([-2, 12].*(500/12));
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
 ax.YAxis(1).Color = colorsDARK(1); ax.YAxis(2).Color = colorsDARK(1);
-%exportgraphics(fig, 'figs/waveforms_zvs-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'results/waveforms_zvs-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');

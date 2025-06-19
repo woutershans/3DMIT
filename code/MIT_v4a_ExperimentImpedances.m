@@ -55,7 +55,7 @@ ax2 = gca; ax2.XScale = 'log'; ax2.YScale = 'log';
 grid on; ax2 = gca; ax2.GridLineStyle = ':'; ax2.GridColor = 'k'; ax2.GridAlpha = 1; box on;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%figName = "figs\LZ_exp_gen1-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-%figName = "figs\LZ_exp_gen1-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+%figName = "results/LZ_exp_gen1-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+%figName = "results/LZ_exp_gen1-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 
 

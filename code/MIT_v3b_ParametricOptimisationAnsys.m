@@ -110,7 +110,7 @@ if plotPareto == true
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'w-', 'LineWidth', 2.5);
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'k-', 'LineWidth', 1.5);
 
-    figName = "figs/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "results/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
@@ -146,8 +146,8 @@ if plotIters == true
     ylabel('Cost');
     set(gca, 'YScale', 'log');    grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    figName = "figs/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-    figName = "figs/ansys_cost_iter-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+    %figName = "results/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "results/ansys_cost_iter-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 end
 
 

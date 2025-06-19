@@ -52,7 +52,7 @@ ylim([20 70]); xlim([0 760]); xticks(60.*(1:1:12));
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, 'figs/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, 'results/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 
