@@ -31,7 +31,7 @@ Pi = Vp.*Ip;  % [W] input power
 
 %% Import ansys results
 
-T = readtable('data\ITX_v5_Optimizer.tab', 'Delimiter','\t', 'FileType','text', 'ReadVariableNames', true);
+T = readtable('../data/ITX_v5_Optimizer.tab', 'Delimiter','\t', 'FileType','text', 'ReadVariableNames', true);
 
 y_t = 1e-3.*T.y_t;    % get the 'yt' column
 x_t = 1e-3.*T.x_t;    % get the 'xt' column
@@ -118,7 +118,7 @@ end
 
 %% Iterations
 % Read table, sort by Evaluation so lines plot left to right
-T = readtable('data\ITX_v5_Optimizer_Cost.csv');
+T = readtable('../data/ITX_v5_Optimizer_Cost.csv');
 T = sortrows(T,"Evaluation"); 
 
 % Extract x (Evaluation) and y (Cost)
@@ -129,7 +129,7 @@ ct = T.Cost;
 plotIters = true;
 if plotIters == true
     fig = figure('units','centimeters','position',[[2 2] [26 5]]);  hold on;
-    
+
     subplot(1,2,1); hold on
     plot(ev, ct, '-', 'color', colorsPAST(1), 'LineWidth', 1);
     plot(ev, cummin(ct), '-', 'color', colorsDARK(1), 'LineWidth', 2);
