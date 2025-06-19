@@ -11,7 +11,7 @@ hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
 
 % Define filename
-file = 'data/20250424_thermal.csv';
+file = '../data/20250424_thermal.csv';
 
 % Get data tables
 data = readtable(file);
@@ -52,7 +52,7 @@ ylim([20 70]); xlim([0 760]); xticks(60.*(1:1:12));
 grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%exportgraphics(fig, 'results/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
+%exportgraphics(fig, '../results/exp_thermal-rw.pdf', 'BackgroundColor', 'none', 'ContentType', 'vector');
 
 
 

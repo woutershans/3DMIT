@@ -189,8 +189,8 @@ if plotLmLk == true
 
     % Save
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    %figName = "results/L_model_exp-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-    %figName = "results/L_model_exp-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+    %figName = "../results/L_model_exp-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "../results/L_model_exp-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 end
 
 

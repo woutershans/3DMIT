@@ -11,7 +11,7 @@ hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 
 
 % Define filenames
-base = 'data/';
+base = '../data/';
 file_Loc = '250117220908';
 file_Lsc = '250117221056';
 file_Zoc = '2025-01-17T14_20_25_OC';
@@ -55,7 +55,7 @@ ax2 = gca; ax2.XScale = 'log'; ax2.YScale = 'log';
 grid on; ax2 = gca; ax2.GridLineStyle = ':'; ax2.GridColor = 'k'; ax2.GridAlpha = 1; box on;
 
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%figName = "results/LZ_exp_gen1-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-%figName = "results/LZ_exp_gen1-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+%figName = "../results/LZ_exp_gen1-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+%figName = "../results/LZ_exp_gen1-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 
 

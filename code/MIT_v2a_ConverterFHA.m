@@ -90,6 +90,6 @@ if plotCLLC == true
     ax.XScale = 'log'; ax.YScale = 'log'; box on;
 
     set(findall(gcf, '-property', 'FontName'), 'FontName', 'Cambria', 'FontSize', 12);
-    %figName = "results/cllc_fr-rw"; export_fig(fullfile(figName), '-pdf', '-nocrop', '-transparent');
+    %figName = "../results/cllc_fr-rw"; export_fig(fullfile(figName), '-pdf', '-nocrop', '-transparent');
 end
 

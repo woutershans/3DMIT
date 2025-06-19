@@ -100,7 +100,6 @@ if plotPareto == true
     ylim([0 40]); xlim([0 500]); clim([0 15])
     c = colorbar; %c.Label.String = 'Ratio xc/yc1';
     colormap(cmapSpectral(256));
-    set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
 
     isPareto = paretofront([Vtot(:), Ptot(:)]);
     Vtot_par = Vtot(isPareto);
@@ -110,7 +109,8 @@ if plotPareto == true
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'w-', 'LineWidth', 2.5);
     plot(Vtot_par_sor.*1e6, Ptot_par_sor, 'k-', 'LineWidth', 1.5);
 
-    %figName = "results/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
+    %figName = "../results/ansys_pareto_opt-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 end
 
 
@@ -129,6 +129,7 @@ ct = T.Cost;
 plotIters = true;
 if plotIters == true
     fig = figure('units','centimeters','position',[[2 2] [26 5]]);  hold on;
+    
     subplot(1,2,1); hold on
     plot(ev, ct, '-', 'color', colorsPAST(1), 'LineWidth', 1);
     plot(ev, cummin(ct), '-', 'color', colorsDARK(1), 'LineWidth', 2);
@@ -145,9 +146,10 @@ if plotIters == true
     xlabel('Evaluation'); 
     ylabel('Cost');
     set(gca, 'YScale', 'log');    grid on; ax = gca; ax.GridLineStyle = ':'; ax.GridColor = 'k'; ax.GridAlpha = 1; box on;
+
     set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-    %figName = "results/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
-    %figName = "results/ansys_cost_iter-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
+    %figName = "../results/ansys_cost_iter-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+    %figName = "../results/ansys_cost_iter-rw.png"; exportgraphics(fig, figName, 'BackgroundColor', 'white', 'Resolution', 600);
 end
 
 

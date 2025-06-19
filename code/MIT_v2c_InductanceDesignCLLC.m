@@ -72,5 +72,5 @@ ax1.YTick = 5:1:11; ax1.XTick = 0:0.1:1;  % Set the axis ticks
 
 grid on; ax = gca; ax.GridLineStyle = '-'; ax.GridColor = colorsPALE(1); ax.GridAlpha = 1; box on;
 set(findall(fig, '-property', 'FontName'), 'FontName', 'Cambria', 'Fontsize', 12);
-%figName = "results/LmLn_conv-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
+%figName = "../results/LmLn_conv-rw.pdf"; exportgraphics(fig, figName, 'BackgroundColor', 'none', 'ContentType', 'vector');
 
