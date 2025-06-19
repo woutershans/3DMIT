@@ -33,7 +33,7 @@ _DOI will be added upon publication_
 ## Requirements
 - MATLAB 2024a
 - Global Optimization Toolbox (required for parametric optimisation)
-yVU)Ub"eX9B(KA%<AO4%
+
 ## Usage
 
 ### Individual Script Execution
