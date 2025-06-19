@@ -1,5 +1,7 @@
 # 3D-Matrix Inductor Transformer (3D-MIT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![3D-MIT](3DMIT.jpg)
+
 
 MATLAB implementation for the 3D-Matrix Inductor Transformer to be published in IEEE JESTPE. Provides all analytical models, derivations, datasets, design steps, and visualisations for the 3D-MIT.
 
@@ -30,7 +32,7 @@ _DOI will be added upon publication_
 ## Requirements
 - MATLAB 2024a
 - Global Optimization Toolbox (required for parametric optimisation)
-
+yVU)Ub"eX9B(KA%<AO4%
 ## Usage
 
 ### Individual Script Execution
