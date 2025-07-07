@@ -10,7 +10,7 @@ MATLAB implementation for the 3D-Matrix Inductor Transformer to be published in 
 MIT Licensed - See [LICENSE](LICENSE)
 
 ## Citation
-DOI: 10.1109/JESTPE.2025.3587336
+DOI: 10.1109/JESTPE.2025.3587336  
 _Citation will be added upon publication_
 
 ## Contents
