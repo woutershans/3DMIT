@@ -10,7 +10,8 @@ MATLAB implementation for the 3D-Matrix Inductor Transformer to be published in 
 MIT Licensed - See [LICENSE](LICENSE)
 
 ## Citation
-_DOI will be added upon publication_
+DOI: 10.1109/JESTPE.2025.3587336
+_Citation will be added upon publication_
 
 ## Contents
 - 3D-MIT flux and inductance model derivation, validation, and visualisation
