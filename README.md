@@ -4,14 +4,14 @@
 <img src="3DMIT.jpg" alt="3D-MIT" width="450"/>
 
 
-MATLAB implementation for the 3D-Matrix Inductor Transformer to be published in IEEE JESTPE. Provides all analytical models, derivations, datasets, design steps, and visualisations for the 3D-MIT.
+MATLAB implementation for the 3D-Matrix Inductor Transformer published in IEEE JESTPE. Provides all analytical models, derivations, datasets, design steps, and visualisations for the 3D-MIT.
 
 ## License
 MIT Licensed - See [LICENSE](LICENSE)
 
 ## Citation
 DOI: 10.1109/JESTPE.2025.3587336  
-_Citation will be added upon publication_
+H. Wouters, W. Vanderwegen, C. Keibeck, M. Ryłko, K. Umetani and W. Martinez, "3D-Matrix Inductor-Transformer with Fractional-Turn Interleaving in a CLLC Resonant Converter for Bidirectional Onboard Chargers," in IEEE Journal of Emerging and Selected Topics in Power Electronics, doi: 10.1109/JESTPE.2025.3587336.
 
 ## Contents
 - 3D-MIT flux and inductance model derivation, validation, and visualisation
