@@ -11,22 +11,12 @@ MIT Licensed - See [LICENSE](LICENSE)
 
 ## Citation
 H. Wouters, W. Vanderwegen, C. Keibeck, M. Ryłko, K. Umetani and W. Martinez, "3D-Matrix Inductor-Transformer with Fractional-Turn Interleaving in a CLLC Resonant Converter for Bidirectional Onboard Chargers," in IEEE Journal of Emerging and Selected Topics in Power Electronics, doi: 10.1109/JESTPE.2025.3587336.
-
-## Contributors
-- **Wout Vanderwegen**  
-  https://github.com/woutVDW  
-  CLLC converter design and testing
   
 ## Contents
 - 3D-MIT flux and inductance model derivation, validation, and visualisation
 - CLLC converter resonant tank design
 - Parametric optimisation based on analytical and Ansys Maxwell results
 - Data and visualisation of various experiments related to the 3D-MIT and the CLLC converter
-
-## Key Features
-- Reproducible analytical models
-- Open datasets for verification
-- Adaptable to other converter designs
 
 ## Repository Structure
 - `/data`: All measurement and simulation datasets
@@ -39,6 +29,11 @@ H. Wouters, W. Vanderwegen, C. Keibeck, M. Ryłko, K. Umetani and W. Martinez, "
 - MATLAB 2024a
 - Global Optimization Toolbox (required for parametric optimisation)
 
+## Contributors
+- **Wout Vanderwegen**  
+  https://github.com/woutVDW  
+  CLLC converter design and testing
+  
 ## Usage
 
 ### Individual Script Execution
