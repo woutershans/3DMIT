@@ -1,14 +1,18 @@
 %clearvars; close all;
+% =================================================================================================
+% First harmonic approximation (FHA) of the CLLC resonant converter's gain
+% =================================================================================================
+%
+%  Based on Texas Instruments TIDM-02013 design guide
+%
+% =================================================================================================
+% (c) 2025, Hans Wouters, MIT Licence
+% =================================================================================================
+
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
-
-
-%% --------------------------------------------------------------------------------------
-% First harmonic approximation (FHA) of the CLLC resonant converter's gain
-% --------------------------------------------------------------------------------------
-%  based on Texas Instruments TIDM-02013 design guide
 
 
 Po = linspace(1, 6000, 7);  % [W] output power

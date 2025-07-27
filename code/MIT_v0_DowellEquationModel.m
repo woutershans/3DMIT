@@ -1,15 +1,21 @@
 %clearvars; close all;
+
+% =================================================================================================
+% Dowell's equation for PCB windings analysis
+% =================================================================================================
+%
+% This section calculates AC resistance ratios for different PCB parameters
+% using Dowell's equation for transformer/magnetic component design
+%
+% =================================================================================================
+% (c) 2025, Hans Wouters, MIT Licence
+% =================================================================================================
+
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
 hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
-
-%% --------------------------------------------------------------------------------------
-% Dowell's equation for PCB windings analysis
-% --------------------------------------------------------------------------------------
-% This section calculates AC resistance ratios for different PCB parameters
-% using Dowell's equation for transformer/magnetic component design
 
 
 % Example converter parameters.

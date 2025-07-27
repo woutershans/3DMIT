@@ -1,4 +1,14 @@
 %clearvars; close all;
+% =================================================================================================
+% Parametric optimisation of the 3D-MIT using custom cores
+% =================================================================================================
+%
+%  Visualisation of Ansys Maxwell FEA results
+%
+% =================================================================================================
+% (c) 2025, Hans Wouters, MIT Licence
+% =================================================================================================
+
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1", "#E0CD44"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF", "#ECE18E"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000", "#9A8B1A"];
@@ -8,11 +18,6 @@ hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
 % Ensure toolbox is available
 assert(~isempty(ver('globaloptim')), 'Global Optimization Toolbox required');
 assert(license('test','gads_toolbox'), 'No license for Global Optimization Toolbox');
-
-%% --------------------------------------------------------------------------------------
-% Parametric optimisation of the 3D-MIT using custom cores
-% --------------------------------------------------------------------------------------
-%  Visualisation of Ansys Maxwell FEA results
 
 
 %% Input parameters

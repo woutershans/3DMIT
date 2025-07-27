@@ -1,15 +1,19 @@
 %clearvars; close all;
+% =================================================================================================
+% Parametric optimisation of the 3D-MIT using commercial cores
+% =================================================================================================
+%
+%  Based on analytical MATLAB models and Ansys Maxwell FEA results
+%
+% =================================================================================================
+% (c) 2025, Hans Wouters, MIT Licence
+% =================================================================================================
+
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1", "#E0CD44"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF", "#ECE18E"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000", "#9A8B1A"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000", "#F5EFC1"];
 hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
-
-%% --------------------------------------------------------------------------------------
-% Parametric optimisation of the 3D-MIT using commercial cores
-% --------------------------------------------------------------------------------------
-%  Based on analytical MATLAB models and Ansys Maxwell FEA results
-
 
 
 %% Extract the losses from the Ansys datafile

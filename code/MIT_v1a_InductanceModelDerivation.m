@@ -1,15 +1,20 @@
 %clearvars; close all;
+% =================================================================================================
+%  3D-MIT symbolic modelling based on coupled–inductor model and 2×2 reluctance system
+% =================================================================================================
+%
+%  Solving the reluctance network of the 3D-MIT to its coupled-inductor
+%  model, and the respective T-circuit transformer model parameters.
+%
+% =================================================================================================
+% (c) 2025, Hans Wouters, MIT Licence
+% =================================================================================================
+
 colorsNORM = ["#505150", "#FF5050", "#77C8A6", "#42ACC6", "#588DCA", "#897AFA", "#9A9CA1"];
 colorsPAST = ["#BFBFBF", "#FF9C9C", "#BEEBD8", "#9BD9E9", "#88ABCC", "#C7BDF9", "#C6C9CF"];
 colorsDARK = ["#000000", "#992F2F", "#417C61", "#3C7A84", "#3D618A", "#545096", "#000000"];
 colorsPALE = ["#E9E9E9", "#FFDDDD", "#E8F8F2", "#DCF2F8", "#D6E2ED", "#ECE8FD", "#000000"];
 hex2rgb = @(hex) sscanf(hex(2:end),'%2x%2x%2x',[1 3])/255;
-
-%% --------------------------------------------------------------------------------------
-%  3D-MIT symbolic modelling based on coupled–inductor model and 2×2 reluctance system
-%  --------------------------------------------------------------------------------------
-%  Solving the reluctance network of the 3D-MIT to its coupled-inductor
-%  model, and the respective T-circuit transformer model parameters.
 
 
 syms Ra Rb Rg real                        % core and gap reluctances
